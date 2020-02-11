@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Weather Dashboard</h1>
+
+    <section class="container">
+        <div class="row">
+            <form class="col-3">
+              <div class="form-row align-items-left">
+                <div class="col-auto">
+                  <label class="sr-only" for="searchCity"></label>
+                  <input type="text" class="form-control mb-2" id="searchCity" placeholder="Search for a city">
+                  <label class="sr-only" for="searchCountry"></label>
+                  <input type="text" class="form-control mb-2" id="searchCountry" placeholder="Search for a country">
+                </div>               
+                <div class="col-auto">
+                  <button id="searchBtn" class="btn btn-primary mb-2">Search</button>
+                </div>
+              </div>
+            </form>       
+            <div class="col-9 mainDiv">
+                
+            </div>                           
+        </div>        
+    </section>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
