@@ -5,12 +5,19 @@ h1 {
     color: white;
     background-color: black;
 }
+.mainRow,
+.container,
+.leftColumn {
+    margin: 0;
+    padding: 0;
+}
+
 
 .form-row,
 .mainDiv {
     padding: 15px;
 }
 
-.card-body {
-    margin-bottom: 15px
+.card {
+    margin-bottom: 15px;
 }

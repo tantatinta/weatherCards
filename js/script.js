@@ -12,7 +12,7 @@ $("#searchBtn").on("click", function(event) {
     if (country === "" || city === "") {
         return;
     }
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&appid=" + APIKey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&units=imperial&appid=" + APIKey;
 
 
     $.ajax({
@@ -21,7 +21,7 @@ $("#searchBtn").on("click", function(event) {
     }).then(function(response) {
         var iconCode = response.weather[0].icon;
         var iconURL = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
-        var tempInput = (parseInt(response.main.temp) - 273.15) * 1.80 + 32;
+        var tempInput = response.main.temp;
         var card = $("<div class='card'>");
         var cardBody = $("<div class='card-body'>");
         card.append(cardBody);
@@ -33,11 +33,11 @@ $("#searchBtn").on("click", function(event) {
         var windSpeed = $("<p class='card-text'>");
 
         //add strings for format
-        cardTitle.text(response.name + ", " + response.sys.country);
+        cardTitle.text(response.name + ", " + response.sys.country + " on " + moment().format("MMM Do YYYY"));
         cardTitle.append(iconImage);
-        temperature.text(tempInput.toFixed());
-        humidity.text(response.main.humidity);
-        windSpeed.text(response.wind.speed);
+        temperature.text("Temperature (F): " + tempInput.toFixed());
+        humidity.text("Humidity: " + response.main.humidity + "%");
+        windSpeed.text("Wind Speed: " + response.wind.speed + " mph");
         
         cardBody.append(cardTitle, temperature, humidity, windSpeed);
         $(".mainDiv").prepend(card);
