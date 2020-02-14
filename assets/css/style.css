@@ -21,3 +21,7 @@ h1 {
 .card {
     margin-bottom: 15px;
 }
+
+.card-text {
+    margin-bottom: 6px;
+}

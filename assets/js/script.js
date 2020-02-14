@@ -1,13 +1,7 @@
-
-
 var APIKey = "166a433c57516f51dfab1f7edaed8413";
-
-
-
 $("#searchBtn").on("click", function(event) {
     event.preventDefault();
-    
-    var country = $("#searchCountry").val().trim();
+        var country = $("#searchCountry").val().trim();
     var city = $("#searchCity").val().trim();
     if (country === "" || city === "") {
         return;
@@ -32,7 +26,7 @@ $("#searchBtn").on("click", function(event) {
         var humidity = $("<p class='card-text'>");
         var windSpeed = $("<p class='card-text'>");
 
-        //add strings for format
+        
         cardTitle.text(response.name + ", " + response.sys.country + " on " + moment().format("MMM Do YYYY"));
         cardTitle.append(iconImage);
         temperature.text("Temperature (F): " + tempInput.toFixed());
@@ -41,32 +35,7 @@ $("#searchBtn").on("click", function(event) {
         
         cardBody.append(cardTitle, temperature, humidity, windSpeed);
         $(".mainDiv").prepend(card);
-
-
-        
-
-    
-
-
-
-
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 })
 
 
