@@ -4,4 +4,4 @@ User can see the temperature, wind speed, and humidity with an icon/representati
 
 
 ![WeatherCards](./assets/img/weatherCards.PNG)
-Deployed site ![here](https://tantatinta.github.io/weatherCards/)
+Deployed site [here](https://tantatinta.github.io/weatherCards/)
